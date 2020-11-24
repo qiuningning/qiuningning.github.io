@@ -87,7 +87,36 @@
 
 <p>3.通过jsDelivr访问</p>
 <p><a href="https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg">https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg</a></p>
-<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2>]]></content>
+<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>加载插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
+
+
+
+<p>使用aplayer的頁面Front-matter添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aplayer: true</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在 Hexo 配置文件 <code>_config.yml</code> 中设置：（这个配置文件必须是最原生的那个）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+
+<p>MetingJS是基于Meting API的 APlayer 衍生播放器，引入 MetingJS 后，播放器将支持对于 QQ音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放</p>
+<p>在页面上加上歌曲</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;515453363&quot; &quot;netease&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>天气</p>
+<h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>1.插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-douban --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.启动</p>
+<p>我们只需要在<code>GitBash</code>中输入以下命令：<code>hexo clean &amp;&amp; hexo douban -bgm &amp;&amp; hexo g &amp;&amp; hexo s</code>即可，注意其中开启hexo-douban的命令中，<code>-bgm</code>代表的是book、game、movie三个参数，如果只需要其中的一部分就只带你想要的那些参数。</p>
+<p><strong>另外注意的是，由于<code>hexo douban</code>的简写也是<code>hexo d</code>，与<code>hexo deploy</code>的简写指令<code>hexo d</code>冲突，因此在进行二者部署的时候，只能都打全名而不能打简写形式。</strong></p>
+<p>3.结果</p>
+<p>页面没有任何变化，查看github上项目源码，其他用户反馈无法爬取豆瓣数据了。作者已经不再维护。</p>
+<p>所以不考虑用豆瓣了。</p>
+]]></content>
       <categories>
         <category>博客</category>
       </categories>
