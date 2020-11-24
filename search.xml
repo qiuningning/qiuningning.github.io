@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>butterfly主题使用</title>
+    <url>/2020/11/23/butterfly%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="butterfly主题使用"><a href="#butterfly主题使用" class="headerlink" title="butterfly主题使用"></a>butterfly主题使用</h1><p>首先，butterfly主题的使用主要是参照官方文档。本文介绍的是使用过程中的一些个人总结。</p>
+<p>当然，需要注意到的是：其中，很多样式的使用是hexo原生的，而不是butterfly独有的。所以要结合hexo使用，疗效更佳。</p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>最重要的一件事，就是配置文件的使用。</p>
+<p>官方推荐：</p>
+<p>把主題文件夾中的 _config.yml 複製到 Hexo 根目錄裏，同時重新命名為 _config.butterfly.yml。</p>
+<p>以後只需要在 _config.butterfly.yml進行配置就行。</p>
+<p>Hexo會自動合併主題中的_config.yml和 _config.butterfly.yml裏的配置，如果存在同名配置，會使用_config.butterfly.yml的配置，其優先度較高。</p>
+<p>实际上，主题目录themes\butterfly下的配置文件 config.yml中已经包含了所有的样式使用，我们只需要修改其中的配置即可！！</p>
+<p>对 着空白的_config.butterfly.yml敲了两天，找各种文档，被官方文档欺骗了感情啊。</p>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n 文章标题</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章封面"><a href="#文章封面" class="headerlink" title="文章封面"></a>文章封面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cover: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jerryc127&#x2F;CDN@latest&#x2F;cover&#x2F;default_bg.png</span><br></pre></td></tr></table></figure>
+
+<p>使用 jsDelivr CDN加速Github 仓库的图片</p>
+<p><a href="https://blog.csdn.net/qq_41684621/article/details/103681615">https://blog.csdn.net/qq_41684621/article/details/103681615</a></p>
+<h3 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># toc (目錄)</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  number: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="主页文章节选"><a href="#主页文章节选" class="headerlink" title="主页文章节选"></a>主页文章节选</h3><p>目前只支持自动节选</p>
+<h3 id="文章封面-1"><a href="#文章封面-1" class="headerlink" title="文章封面"></a>文章封面</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#文章图片设置</span><br><span class="line">cover:</span><br><span class="line">  # display the cover or not (是否顯示文章封面)</span><br><span class="line">  index_enable: true</span><br><span class="line">  aside_enable: true</span><br><span class="line">  archives_enable: true</span><br><span class="line">  # the position of cover in home page (封面顯示的位置)</span><br><span class="line">  # left&#x2F;right&#x2F;both</span><br><span class="line">  position: both</span><br><span class="line">  # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)</span><br><span class="line">  default_cover:</span><br><span class="line">    # - https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;05&#x2F;01&#x2F;gkihqEjXxJ5UZ1C.jpg</span><br></pre></td></tr></table></figure>
+
+<p>cover：文章路径 ，这个是在文章页面里面配置图片</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: butterfly主题使用</span><br><span class="line">date: 2020-11-23 22:33:07</span><br><span class="line">tags:</span><br><span class="line">	- hexo</span><br><span class="line">	- butterfly </span><br><span class="line">categories: 博客</span><br><span class="line">cover: https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;jerryc127&#x2F;CDN@latest&#x2F;cover&#x2F;default_bg.png  # 是否顯示文章封面</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Avatar (頭像)</span><br><span class="line">avatar:</span><br><span class="line">  img: &#x2F;img&#x2F;avatar.jpg</span><br><span class="line">  effect: false</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，这个img的目录是 themes\butterfly\source\img</p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h2><p>第一步，修改comments通用配置，开启valine评论组件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#评论</span><br><span class="line">comments:</span><br><span class="line">  # Up to two comments system, the first will be shown as default</span><br><span class="line">  # Choose: Disqus&#x2F;Disqusjs&#x2F;Livere&#x2F;Gitalk&#x2F;Valine&#x2F;Utterances&#x2F;Facebook Comments</span><br><span class="line">  use:</span><br><span class="line">    - Valine</span><br><span class="line">  # - Disqus</span><br><span class="line">  text: true # Display the comment name next to the button</span><br><span class="line">  # lazyload: The comment system will be load when comment element enters the browser&#39;s viewport.</span><br><span class="line">  # If you set it to true, the comment count will be invalid</span><br><span class="line">  lazyload: true</span><br><span class="line">  count: true # Display comment count in top_img</span><br></pre></td></tr></table></figure>
+
+<p>第二步，获取appID 、appKey</p>
+<p><a href="https://leancloud.cn/">https://leancloud.cn</a></p>
+<p>第三步 修改Valine组件的配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#评论设置</span><br><span class="line"># valine</span><br><span class="line"># https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  appId: PjkUY4XqrHrkKCQ3PTshLt9L-gzGzoHsz # leancloud application app id</span><br><span class="line">  appKey: TOFSBXjcYihwiOFFSpfdbK5q # leancloud application app key</span><br><span class="line">  pageSize: 10 # comment list page size</span><br><span class="line">  avatar: monsterid # gravatar style https:&#x2F;&#x2F;valine.js.org&#x2F;#&#x2F;avatar</span><br><span class="line">  lang: zh-CN # i18n: zh-CN&#x2F;zh-TW&#x2F;en&#x2F;ja</span><br><span class="line">  placeholder: 記得留下你的昵称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)</span><br><span class="line">  guest_info: nick,mail,link # valine comment header info (nick&#x2F;mail&#x2F;link)</span><br><span class="line">  recordIP: false # Record reviewer IP</span><br><span class="line">  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span><br><span class="line">  bg: # valine background</span><br><span class="line">  emojiCDN: # emoji CDN</span><br><span class="line">  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar</span><br><span class="line">  requiredFields: nick,mail # required fields (nick&#x2F;mail)</span><br><span class="line">  option:</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#搜索设置</span><br><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: false</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/11/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
