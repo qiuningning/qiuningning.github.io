@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CND</title>
+    <url>/2020/11/11/CND/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>对于一个博客系统，肯定需要用到很多图片，我们直接访问互联网资源，加载速度很慢，很影响用户体验。</p>
+<p>这时，我们可以考虑用网站配置CDN加速。</p>
+<h2 id="CND"><a href="#CND" class="headerlink" title="CND"></a>CND</h2><p>中文全称：内容分发网络</p>
+<p>什么是CDN加速？对于网站来说，通过CDN加速可以提高网站的访问速度，因为这是一种将网站内容通过缓存方式分发不同节点的技术。当网站有了CDN加速以后，往往可以根据用户的请求地域，去选择一个离用户最近网络的缓存服务器，这样就可以为用户更快的提供内容服务，与直接访问源站是没有什么区别的，这种缩短与内容网络距离的方式，达到加速效果的技术，就叫做CDN加速。</p>
+<h2 id="jsDelivr"><a href="#jsDelivr" class="headerlink" title="jsDelivr"></a>jsDelivr</h2><p> jsDelivr是一个免费、开源的加速CDN公共服务，托管了许多大大小小的项目，可加速访问托管的项目目录或图片资源。如果你想加载github某个仓库中的某张图片，可以通过jsDelivr来访问加载的</p>
+<p>参考这篇教程：</p>
+<p><a href="https://www.cnblogs.com/murenziwei/p/12747311.html">https://www.cnblogs.com/murenziwei/p/12747311.html</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式：</span><br><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名称&#x2F;仓库名称@版本号&#x2F;目录</span><br></pre></td></tr></table></figure>
+
+<p>注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源。</p>
+<p>根据我的测试：</p>
+<p>根据所在分支 @master 可以不用@</p>
+<p>在mian分支必须要加上@main</p>
+<h2 id="CND静态资源库"><a href="#CND静态资源库" class="headerlink" title="CND静态资源库"></a>CND静态资源库</h2><p>由于国内最大的同性交友网站github加载速度很慢，但是jsDeliv可以免费提供CDN加速，我们考虑在github上创建一个静态资源库，就是相当于一个图床。用来保存我们博客系统的图片等静态资源。</p>
+<p>操作：</p>
+<p>1.本机上创建静态资源，包括图片文件等。</p>
+<p>2.GitHub上新建一个仓库，将本地资源推送到guithub上</p>
+<p>然后在文件根目录下：（master已经被GitHub弃用了，改为了main）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init （初始化）</span><br><span class="line">git add .（上传所有文件）</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin XXX（仓库地址）</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>3.通过jsDelivr访问</p>
+<p>访问路径</p>
+<p><a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D%E7%A7%B0/%E4%BB%93%E5%BA%93%E5%90%8D%E7%A7%B0@%E7%89%88%E6%9C%AC%E5%8F%B7/%E7%9B%AE%E5%BD%95">https://cdn.jsdelivr.net/gh/用户名称/仓库名称@版本号/目录</a></p>
+<p>比如我自己的资源目录格式：</p>
+<p><a href="https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg">https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg</a></p>
+]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/11/22/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>butterfly主题使用</title>
     <url>/2020/11/23/butterfly%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="butterfly主题使用"><a href="#butterfly主题使用" class="headerlink" title="butterfly主题使用"></a>butterfly主题使用</h1><p>首先，butterfly主题的使用主要是参照官方文档。本文介绍的是使用过程中的一些个人总结。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="butterfly主题使用"><a href="#butterfly主题使用" class="headerlink" title="butterfly主题使用"></a>butterfly主题使用</h2><p>首先，butterfly主题的使用主要是参照官方文档。本文介绍的是使用过程中的一些个人总结。</p>
 <p>当然，需要注意到的是：其中，很多样式的使用是hexo原生的，而不是butterfly独有的。所以要结合hexo使用，疗效更佳。</p>
 <h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p><strong>最重要的一件事，就是配置文件的使用。</strong></p>
 <p>官方推荐：</p>
@@ -73,8 +127,16 @@
 
 
 
+<p>删除评论</p>
+<p><a href="https://leancloud.cn/%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8">https://leancloud.cn/打开应用</a></p>
+<p>存储——结构化数据——comment</p>
+<p>可以看到评论列表，进行删除操作</p>
 <p>邮件通知</p>
 <p><strong>rrcn**</strong>qblh**<strong>kboq**</strong>bcbi**</p>
+<p><strong>ihfl**</strong>fqej**<strong>hakq**</strong>bcbj**</p>
+<p>邮件提示配置失败</p>
+<p>被DNS搞晕了，参考下面科普文章</p>
+<p><a href="https://leancloudblog.com/Domain-Name-Story-confirm/">https://leancloudblog.com/Domain-Name-Story-confirm/</a></p>
 <h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#搜索设置</span><br><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: false</span><br></pre></td></tr></table></figure>
 
 
@@ -125,26 +187,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">admin:</span><br><span class="line">  username: myfavoritename</span><br><span class="line">  password_hash: be121740bf988b2225a313fa1f107ca1</span><br><span class="line">  secret: a secret something</span><br></pre></td></tr></table></figure>
 
 <p>4.重启<a href="https://hexo.io/zh-cn/">hexo</a>，就可以看到登录页面了</p>
-<h2 id="CND"><a href="#CND" class="headerlink" title="CND"></a>CND</h2><p>中文全称：内容分发网络</p>
-<p>什么是CDN加速？对于网站来说，通过CDN加速可以提高网站的访问速度，因为这是一种将网站内容通过缓存方式分发不同节点的技术。当网站有了CDN加速以后，往往可以根据用户的请求地域，去选择一个离用户最近网络的缓存服务器，这样就可以为用户更快的提供内容服务，与直接访问源站是没有什么区别的，这种缩短与内容网络距离的方式，达到加速效果的技术，就叫做CDN加速。</p>
-<h3 id="jsDelivr"><a href="#jsDelivr" class="headerlink" title="jsDelivr"></a>jsDelivr</h3><p> jsDelivr是一个免费、开源的加速CDN公共服务，托管了许多大大小小的项目，可加速访问托管的项目目录或图片资源。如果你想加载github某个仓库中的某张图片，可以通过jsDelivr来访问加载的</p>
-<p>参考这篇教程：</p>
-<p><a href="https://www.cnblogs.com/murenziwei/p/12747311.html">https://www.cnblogs.com/murenziwei/p/12747311.html</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">格式：</span><br><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名称&#x2F;仓库名称@版本号&#x2F;目录</span><br></pre></td></tr></table></figure>
-
-<p>注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源。</p>
-<p>根据我的测试：</p>
-<p>根据所在分支 @master 可以不用@</p>
-<p>在mian分支必须要加上@main</p>
-<h3 id="CND静态资源库"><a href="#CND静态资源库" class="headerlink" title="CND静态资源库"></a>CND静态资源库</h3><p>在github上创建一个静态资源库，就是相当于一个图床，什么七牛云图床</p>
-<p>操作：</p>
-<p>1.本机上创建一个图片目录，包括图片文件。（不为空文件夹）</p>
-<p>2.GitHub上新建一个仓库</p>
-<p>然后在文件根目录下：（master已经被GitHub弃用了，改为了main）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init （初始化）</span><br><span class="line">git add .（上传所有文件）</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin XXX（仓库地址）</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-
-<p>3.通过jsDelivr访问</p>
-<p><a href="https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg">https://cdn.jsdelivr.net/gh/qiuningning/CND@main/img/avatar.jpg</a></p>
 <h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><p>加载插件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
 
@@ -171,9 +213,6 @@
 <p>2.启动</p>
 <p>我们只需要在<code>GitBash</code>中输入以下命令：<code>hexo clean &amp;&amp; hexo douban -bgm &amp;&amp; hexo g &amp;&amp; hexo s</code>即可，注意其中开启hexo-douban的命令中，<code>-bgm</code>代表的是book、game、movie三个参数，如果只需要其中的一部分就只带你想要的那些参数。</p>
 <p><strong>另外注意的是，由于<code>hexo douban</code>的简写也是<code>hexo d</code>，与<code>hexo deploy</code>的简写指令<code>hexo d</code>冲突，因此在进行二者部署的时候，只能都打全名而不能打简写形式。</strong></p>
-<p>3.结果</p>
-<p>页面没有任何变化，查看github上项目源码，其他用户反馈无法爬取豆瓣数据了。作者已经不再维护。</p>
-<p>所以不考虑用豆瓣了。</p>
 ]]></content>
       <categories>
         <category>博客</category>
@@ -182,24 +221,6 @@
         <tag>hexo</tag>
         <tag>butterfly</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/11/22/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>盛夏</title>
