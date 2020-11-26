@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CND</title>
-    <url>/2020/11/11/CND/</url>
+    <title>CDN</title>
+    <url>/2020/11/11/CDN/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>对于一个博客系统，肯定需要用到很多图片，我们直接访问互联网资源，加载速度很慢，很影响用户体验。</p>
 <p>这时，我们可以考虑用网站配置CDN加速。</p>
-<h2 id="CND"><a href="#CND" class="headerlink" title="CND"></a>CND</h2><p>中文全称：内容分发网络</p>
+<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>中文全称：内容分发网络</p>
 <p>什么是CDN加速？对于网站来说，通过CDN加速可以提高网站的访问速度，因为这是一种将网站内容通过缓存方式分发不同节点的技术。当网站有了CDN加速以后，往往可以根据用户的请求地域，去选择一个离用户最近网络的缓存服务器，这样就可以为用户更快的提供内容服务，与直接访问源站是没有什么区别的，这种缩短与内容网络距离的方式，达到加速效果的技术，就叫做CDN加速。</p>
 <h2 id="jsDelivr"><a href="#jsDelivr" class="headerlink" title="jsDelivr"></a>jsDelivr</h2><p> jsDelivr是一个免费、开源的加速CDN公共服务，托管了许多大大小小的项目，可加速访问托管的项目目录或图片资源。如果你想加载github某个仓库中的某张图片，可以通过jsDelivr来访问加载的</p>
 <p>参考这篇教程：</p>
@@ -16,7 +16,7 @@
 <p>根据我的测试：</p>
 <p>根据所在分支 @master 可以不用@</p>
 <p>在mian分支必须要加上@main</p>
-<h2 id="CND静态资源库"><a href="#CND静态资源库" class="headerlink" title="CND静态资源库"></a>CND静态资源库</h2><p>由于国内最大的同性交友网站github加载速度很慢，但是jsDeliv可以免费提供CDN加速，我们考虑在github上创建一个静态资源库，就是相当于一个图床。用来保存我们博客系统的图片等静态资源。</p>
+<h2 id="CDN静态资源库"><a href="#CDN静态资源库" class="headerlink" title="CDN静态资源库"></a>CDN静态资源库</h2><p>由于国内最大的同性交友网站github加载速度很慢，但是jsDeliv可以免费提供CDN加速，我们考虑在github上创建一个静态资源库，就是相当于一个图床。用来保存我们博客系统的图片等静态资源。</p>
 <p>操作：</p>
 <p>1.本机上创建静态资源，包括图片文件等。</p>
 <p>2.GitHub上新建一个仓库，将本地资源推送到guithub上</p>
