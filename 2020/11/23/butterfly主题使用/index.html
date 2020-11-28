@@ -319,6 +319,9 @@ if (asideStatus !== undefined) {
       emojiMaps: "",
       enableQQ: false,
       path: window.location.pathname,
+      master: 'https://qiunn.cn',
+      friends: 'https://plushine.cn'.split(','),
+
     }
 
     if (true) { 
@@ -334,7 +337,7 @@ if (asideStatus !== undefined) {
   }
 
   if (typeof Valine === 'function') initValine() 
-  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+  else $.getScript('https://cdn.jsdelivr.net/gh/xingjiahui/modify@v1.1.0/valine/valine.min.js', initValine)
 }
 
 if ('Valine' === 'Valine' || !true) {
